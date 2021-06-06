@@ -12,5 +12,7 @@
     <color name="red">#ff5d5d</color>
     <color name="blue">#3c9ae3</color>
     <color name="light">#D1CFCF</color>
+    <color name="correct_answer">#b1eee5</color>
+    <color name="wrong_asnwer">#ffb5b4</color>
 
 </resources>

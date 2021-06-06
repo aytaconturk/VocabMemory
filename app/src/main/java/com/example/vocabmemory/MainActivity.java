@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        database = Room.databaseBuilder(getApplicationContext(), Database.class, "vocabMemory").
-//                allowMainThreadQueries().build();
 
 
         Database.getInstance(getApplicationContext());
@@ -51,12 +49,6 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager.beginTransaction().add(R.id.fragment_container, new HomeFragment()).commit();
 
         }
-        /*
-
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    verifyStoragePermissions(this);
-                }
-        */
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
@@ -88,62 +80,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
-    public void nextWordCard(View view) {
-        //
-    }
 
-   /* @Override
-    public void onStart() {
-        super.onStart();
-//        MainActivity.database.close();
-
-//        File dbfile = new File(MainActivity.database.getOpenHelper().getWritableDatabase().getPath());
-        File dbfile = this.getDatabasePath(MainActivity.database.toString());
-        File sdir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),"DBsaves");
-        String sfpath = sdir.getPath() + File.separator + "DBsave" + String.valueOf(System.currentTimeMillis());
-        if (!sdir.exists()) {
-            sdir.mkdirs();
-        }
-        File savefile = new File(sfpath);
-        try {
-            savefile.createNewFile();
-            int buffersize = 8 * 1024;
-            byte[] buffer = new byte[buffersize];
-            int bytes_read = buffersize;
-            OutputStream savedb = new FileOutputStream(sfpath);
-            InputStream indb = new FileInputStream(dbfile);
-            while ((bytes_read = indb.read(buffer,0,buffersize)) > 0) {
-                savedb.write(buffer,0,bytes_read);
-            }
-            savedb.flush();
-            indb.close();
-            savedb.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void verifyStoragePermissions(MainActivity activity) {
-
-        final int REQUEST_EXTERNAL_STORAGE = 1;
-        String[] PERMISSIONS_STORAGE = {
-
-                //Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
-        };
-
-        int permission = ActivityCompat.checkSelfPermission(
-                activity,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
-        if(permission != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(
-                    activity,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
-            );
-        }
-    }*/
 }

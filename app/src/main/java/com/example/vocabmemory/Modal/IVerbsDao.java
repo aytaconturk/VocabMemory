@@ -25,6 +25,9 @@ public interface IVerbsDao {
     @Query("SELECT * FROM verbs")
     public List<Verbs> getVerbs();
 
+    @Query("SELECT * FROM verbs WHERE id =:id")
+    public Verbs getVerbMeaning(int id);
+
     @Query("SELECT word FROM verbs")
     public List<String> getVerbWords();
 
@@ -39,6 +42,9 @@ public interface IVerbsDao {
 
     @Query("SELECT id FROM verbs WHERE id = (SELECT MAX(id) FROM verbs)")
     public int getLastId();
+
+    @Query("SELECT id FROM verbs WHERE meaning = :meaning")
+    public int getMeaningId(String meaning);
 
     @Query("SELECT COUNT(*) FROM verbs WHERE learningStatus = 0")
     public int getDontKnowWordNumber();

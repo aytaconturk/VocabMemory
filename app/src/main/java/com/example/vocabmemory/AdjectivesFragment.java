@@ -102,13 +102,13 @@ public class AdjectivesFragment extends Fragment implements IWord{
             }
         });
 
-        btnAddWordFragment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Add verb word to the Database
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new AddWordFragment()).addToBackStack(null).commit();
-            }
-        });
+//        btnAddWordFragment.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Add verb word to the Database
+//                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new AddWordFragment()).addToBackStack(null).commit();
+//            }
+//        });
 
 
 
@@ -117,7 +117,7 @@ public class AdjectivesFragment extends Fragment implements IWord{
 
     @Override
     public void getLayoutObjects(View view) {
-        btnAddWordFragment = view.findViewById(R.id.btn_add_verb_fragment);
+//        btnAddWordFragment = view.findViewById(R.id.btn_add_verb_fragment);
 
         imgBtnVerbsClose = view.findViewById(R.id.img_btn_words_close);
         dontKnowButton = view.findViewById(R.id.btn_dont_know);
@@ -216,7 +216,7 @@ public class AdjectivesFragment extends Fragment implements IWord{
                 synonymsLinearLayout.addView(valueTV);
             }
 
-            tvDontKnowWordNumber.setText("" + Database.getInstance(getContext()).getAdjectivesDao().getDontKnowWordNumber());
+//            tvDontKnowWordNumber.setText("" + Database.getInstance(getContext()).getAdjectivesDao().getDontKnowWordNumber());
 
         }
     }
