@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DADADC"
+    android:elevation="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:elevation="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="50dp"
+        android:outlineAmbientShadowColor="#232222"
+        android:outlineSpotShadowColor="#232222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/custom_list_word"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Verbs"
+            android:textColor="#474747"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/custom_list_meaning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Verbs"
+            android:textColor="#474747"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            style="?android:attr/borderlessButtonStyle"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="#fff"
+            app:strokeWidth="0dp"
+            android:elevation="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="2dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_next"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#fe6e6e" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</TableLayout>

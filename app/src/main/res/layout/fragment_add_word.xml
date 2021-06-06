@@ -7,21 +7,45 @@
     android:layout_height="match_parent"
     tools:context=".AddWordFragment">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/btn_add_new_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:text="Add New Verb Word"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:text="Add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <ScrollView
+        android:layout_width="424dp"
+        android:layout_height="627dp"
+        android:padding="20dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvVerbsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:padding="10dp"
+            android:text="Add New Verb Word"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ScrollView>
+
+
+
+<!--    <EditText
         android:id="@+id/et_verb_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,16 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_verb_name" />
 
-    <Button
-        android:id="@+id/btn_add_new_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_verb_example" />
+
 
     <EditText
         android:id="@+id/et_verbs_id"
@@ -83,6 +98,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_verb_meaning" />
+        app:layout_constraintTop_toBottomOf="@+id/et_verb_meaning" />-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAddWordFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_word_from_categories"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:layout_weight="1"
+        android:backgroundTint="#fe6e6e"
+        android:elevation="12dp"
+        android:text="Add Word From Categories"
+        android:textColor="#000"
+        app:cornerRadius="5dp"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#fe6e6e"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_your_own_word"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="265dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="60dp"
+        android:layout_weight="2"
+        android:backgroundTint="#e9f4ff"
+        android:elevation="12dp"
+        android:padding="20dp"
+        android:text="Add Your Own Words"
+        android:textColor="#000"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_word_from_categories"
+        app:strokeColor="#e9f4ff"
+        app:strokeWidth="2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

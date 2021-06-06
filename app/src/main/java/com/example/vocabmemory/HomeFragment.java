@@ -1,5 +1,6 @@
 package com.example.vocabmemory;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -65,6 +66,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             //adverbs start butonuna tiklaninca AdverbsFragment fragmentina gider
             case R.id.btn_adverbs:
                 MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new AdverbFragment()).addToBackStack(null).commit();
+                break;
+
+            //adjectives start butonuna tiklaninca AdjectivesFragment fragmentina gider
+            case R.id.btn_adjectives:
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new AdjectivesFragment()).addToBackStack(null).commit();
+                break;
+
+            //phrases and idioms start butonuna tiklaninca PhrasesAndIdiomsFragment fragmentina gider
+            case R.id.btn_phrases_idioms:
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new PhrasesAndIdiomsFragment()).addToBackStack(null).commit();
+                break;
+
+            //Quiz start butonuna tiklaninca Quiz fragmentina gider
+            case R.id.btn_quiz:
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new QuizFragment()).addToBackStack(null).commit();
                 break;
         }
     }

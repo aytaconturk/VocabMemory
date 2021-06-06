@@ -1,11 +1,11 @@
-package com.example.vocabmemory;
+package com.example.vocabmemory.Modal;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "verbs")
-public class Verbs {
+@Entity(tableName = "userWords")
+public class UserWords {
 
     @PrimaryKey
     private int id;
@@ -19,8 +19,14 @@ public class Verbs {
     @ColumnInfo(name = "example")
     private String example;
 
+    @ColumnInfo(name = "synonyms")
+    private String synonyms;
+
     @ColumnInfo(name = "learningStatus")
     private int learningStatus = 0;
+
+    @ColumnInfo(name = "image")
+    private String image;
 
     public int getId() {
         return id;
@@ -54,11 +60,27 @@ public class Verbs {
         this.example = example;
     }
 
+    public String getSynonyms() {
+        return synonyms;
+    }
+
+    public void setSynonyms(String synonyms) {
+        this.synonyms = synonyms;
+    }
+
     public int getLearningStatus() {
         return learningStatus;
     }
 
     public void setLearningStatus(int learningStatus) {
         this.learningStatus = learningStatus;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
